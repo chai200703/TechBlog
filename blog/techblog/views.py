@@ -6,9 +6,9 @@ from .models import Blog
 from django.contrib.auth.models import Group
 
 # Create your views here.
-def index(request):
+def home(request):
     blogs = Blog.objects.all()
-    return render(request,'blog/index.html',{'blogs':blogs})
+    return render(request,'blog/home.html',{'blogs':blogs})
 
 def user_signup(request):
     if request.method == "POST":
